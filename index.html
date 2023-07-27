@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let withdraw = Number(prompt("Digite o valor a ser sacado: ")),
+        qtdNota50 = 0,
+        qtdNota10 = 0,
+        qtdNota5 = 0,
+        qtdNota1 = 0,
+        confirma = true;
+
+        while (confirma) {
+            if (withdraw >= 50) {
+                qtdNota50++;
+                withdraw -= 50
+            } else if (withdraw >= 10) {
+                qtdNota10++;
+                withdraw -= 10
+            } else if (withdraw >= 5) {
+                qtdNota5++;
+                withdraw -= 5
+            } else if (withdraw >= 1) {
+                qtdNota1++;
+                withdraw -= 1
+            } else {
+                confirma = false
+            }
+        }
+
+        console.log(`Quantidade Notas de 50: ${qtdNota50}`);
+        console.log(`Quantidade Notas de 10: ${qtdNota10}`);
+        console.log(`Quantidade Notas de 5: ${qtdNota5}`);
+        console.log(`Quantidade Notas de 1: ${qtdNota1}`);
+    </script>
+</body>
+</html>
